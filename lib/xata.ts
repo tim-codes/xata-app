@@ -31,6 +31,8 @@ let instance: XataClient | undefined = undefined;
 export const getXataClient = () => {
   if (instance) return instance;
 
-  instance = new XataClient();
+  instance = new XataClient({
+    fetch: (input, init) => fetch(input, { ...init, cache: 'no-cache' }),
+  });
   return instance;
 };
