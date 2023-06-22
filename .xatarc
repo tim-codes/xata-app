@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Tim-O-Connell-s-workspace-ioem4u.eu-west-1.xata.sh/db/sandbox",
+  "codegen": {
+    "output": "lib/xata.ts"
+  }
+}

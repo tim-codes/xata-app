@@ -1,0 +1,28 @@
+extends:
+  - eslint:recommended
+  - plugin:@typescript-eslint/recommended
+  - prettier
+  - plugin:prettier/recommended
+  - next/core-web-vitals
+
+plugins:
+  - '@typescript-eslint'
+  - simple-import-sort
+
+parser: '@typescript-eslint/parser'
+
+parserOptions:
+  project: tsconfig.json
+
+root: true
+
+rules:
+  react-hooks/exhaustive-deps: off
+  simple-import-sort/imports:
+    - error
+    - groups:
+        - ["^react", "^@?\\w", "^", "^\\."]
+  '@typescript-eslint/no-unused-vars':
+    - error
+    - ignoreRestSiblings: true
+      destructuredArrayIgnorePattern: "^_"
