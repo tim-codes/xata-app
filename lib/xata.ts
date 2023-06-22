@@ -32,6 +32,7 @@ export const getXataClient = () => {
   if (instance) return instance;
 
   instance = new XataClient({
+    // need to set no-cache to avoid Vercel caching the db response (it's very stubborn!)
     fetch: (input, init) => fetch(input, { ...init, cache: 'no-cache' }),
   });
   return instance;

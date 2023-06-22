@@ -37,6 +37,7 @@ export function AddUser() {
     >
       <label htmlFor="name-input">Enter Name</label>
       <input name="name-input" type="text" value={name} onChange={(e) => setName(e.target.value)} />
+      <button type="submit">Save</button>
     </form>
   );
 }

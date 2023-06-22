@@ -5,7 +5,7 @@ import RecoilRootWrapper from '@/lib/recoil-root';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  title: 'Xatlaicious',
+  title: 'Xatalicious',
   description: 'Testing Xata with Server Components',
 };
 
