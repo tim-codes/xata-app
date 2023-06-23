@@ -1,3 +1,4 @@
+export * from './title';
 export * from './user-add';
 export * from './user-loading-row';
 export * from './user-row';

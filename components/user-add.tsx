@@ -2,6 +2,7 @@
 
 import { startTransition, useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import styles from '../app/page.module.css';
 
 export function AddUser() {
   const [loading, setLoading] = useState(false);
@@ -30,14 +31,17 @@ export function AddUser() {
 
   return (
     <form
+      className={styles.addUser}
       onSubmit={(e) => {
         saveUser().catch(console.error);
         e.preventDefault();
       }}
     >
-      <label htmlFor="name-input">Enter Name</label>
+      <label htmlFor="name-input">New User</label>
       <input name="name-input" type="text" value={name} onChange={(e) => setName(e.target.value)} />
-      <button type="submit">Save</button>
+      <button type="submit">
+        <div>Save</div>
+      </button>
     </form>
   );
 }
