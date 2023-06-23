@@ -1,13 +1,19 @@
 'use client';
 
-import { startTransition, useCallback, useState } from 'react';
+import { userCreateLoading } from '@/lib/atoms';
 import { useRouter } from 'next/navigation';
+import { startTransition, useCallback, useEffect, useState } from 'react';
+import { useSetRecoilState } from 'recoil';
 import styles from '../app/page.module.css';
 
 export function AddUser() {
   const [loading, setLoading] = useState(false);
   const [name, setName] = useState('');
   const router = useRouter();
+
+
+  const setCreateLoading = useSetRecoilState(userCreateLoading);
+  useEffect(() => setCreateLoading(loading), [loading]);
 
   const saveUser = useCallback(async () => {
     if (loading) return;

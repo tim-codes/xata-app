@@ -1,5 +1,5 @@
-import { Suspense } from 'react';
 import { AddUser, UserRow, UsersList, UsersListData, WithUserLoading, XataliciousTItle } from '@/components';
+import { Suspense } from 'react';
 import styles from './page.module.css';
 
 export default function Home() {
